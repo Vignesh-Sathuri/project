@@ -1,0 +1,24 @@
+{% extends 'calculators/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/sip_style.css' %}">
+
+<div class="calculator-container">
+    <h1>SIP Calculator</h1>
+    <form method="get" action="{% url 'sip_result' %}"> {% comment %} Use GET method {% endcomment %}
+        <div class="form-group">
+            <label for="principal">Monthly Investment:</label>
+            <input type="number" name="principal" id="principal" required>
+        </div>
+        <div class="form-group">
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" name="rate" id="rate" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Investment Period (Years):</label>
+            <input type="number" name="time" id="time" required>
+        </div>
+        <button type="submit" class="calculate-button">Calculate</button>
+    </form>
+</div>
+{% endblock %}

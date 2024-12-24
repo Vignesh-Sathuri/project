@@ -1,0 +1,21 @@
+{% extends 'calculators/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/sip_style.css' %}">
+
+<div class="result-container">
+    <h1>SIP Calculation Results</h1>
+    {% if result %}
+        {% if result == "Invalid input. Please enter numbers only." %}
+            <p class="error-message">{{ result }}</p>
+        {% else %}
+            <p>Invested Amount: &#8377; {{ result.invested_amount }}</p>
+            <p>Expected Returns: &#8377; {{ result.expected_returns }}</p>
+            <p>Total Value: &#8377; {{ result.total_value }}</p>
+        {% endif %}
+    {% else %}
+        <p>No calculation performed yet.</p>
+    {% endif %}
+    <a href="{% url 'sip_calculator' %}">Calculate Again</a>
+</div>
+{% endblock %}

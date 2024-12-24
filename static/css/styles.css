@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; /* White header background */
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    margin-left: 20px;
+    color: #333;
+}
+
+.header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.header .login-register {
+    background-color: #4CAF50; /* Green button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.header .login-register:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd; /* Light gray line */
+}
+
+.calculators-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.calculators-description {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the boxes */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.calculator-box {
+    width: calc(30% - 20px); /* Adjust width for spacing */
+    min-height: 200px; /* Set a minimum height */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

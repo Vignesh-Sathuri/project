@@ -1,0 +1,57 @@
+{% extends 'calculators/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="calculators-heading">
+        <p>Financial Calculators</p>
+    </div>
+    <div class="calculators-description">
+        <p>Choose a calculator from below to perform financial calculations.</p>
+    </div>
+    <div class="container">
+        <div class="calculator-box" onclick='window.location.href="{% url 'sip_calculator' %}"'>
+            <h2>SIP Calculator</h2>
+            <p>Estimate your potential returns from a Systematic Investment Plan.</p>
+            <img src="{% static 'images/img.jpg' %}" alt="SIP">  </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'rd_calculator' %}"'>
+            <h2>Recurring Deposit Calculator</h2>
+            <p>Calculate the maturity amount and interest earned on RD investments.</p>
+            <img src="{% static 'images/img1.jpg' %}" alt="Recurring Deposit">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'pomis_calculator' %}"'>
+            <h2>Post Office MIS Calculator</h2>
+            <p>Determine monthly income and maturity value for Post Office schemes.</p>
+            <img src="{% static 'images/img2.png' %}" alt="Post Office">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'gst_calculator' %}"'>
+            <h2>GST Calculator</h2>
+            <p>Compute Goods and Services Tax based on the applicable rate.</p>
+            <img src="{% static 'images/img3.jpg' %}" alt="GST">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'simple_interest_calculator' %}"'>
+            <h2>Simple Interest Calculator</h2>
+            <p>Find the interest earned on your principal over a fixed time period.</p>
+            <img src="{% static 'images/img4.jpg' %}" alt="Simple Interest">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'compound_interest_calculator' %}"'>
+            <h2>Compound Interest Calculator</h2>
+            <p>Calculate the compound interest and final amount of an investment.</p>
+            <img src="{% static 'images/img5.jpg' %}" alt="Compound Interest">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'ssy_calculator' %}"'>
+            <h2>Sukanya Samriddhi Yojana Calculator</h2>
+            <p>Plan your savings for your daughter's future with this SSY tool.</p>
+            <img src="{% static 'images/img6.jpg' %}" alt="SSY">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'fd_calculator' %}"'>
+            <h2>Fixed Deposit Calculator</h2>
+            <p>Estimate returns and maturity amount from fixed deposits.</p>
+            <img src="{% static 'images/img7.jpg' %}" alt="Fixed Deposit">
+        </div>
+        <div class="calculator-box" onclick='window.location.href="{% url 'emi_calculator' %}"'>
+            <h2>EMI Calculator</h2>
+            <p>Calculate your monthly installment for loans and mortgages.</p>
+            <img src="{% static 'images/img8.jpg' %}" alt="EMI">
+        </div>
+    </div>
+{% endblock %}
